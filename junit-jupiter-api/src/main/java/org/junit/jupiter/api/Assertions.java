@@ -51,31 +51,35 @@ public final class Assertions {
 	/**
 	 * <em>Fails</em> a test with the given failure {@code message}.
 	 */
-	public static void fail(String message) {
+	public static <V> V fail(String message) {
 		AssertionUtils.fail(message);
+		return null; // appeasing the compiler: this line will never be executed.
 	}
 
 	/**
 	 * <em>Fails</em> a test with the given failure {@code message} as well
 	 * as the underlying {@code cause}.
 	 */
-	public static void fail(String message, Throwable cause) {
+	public static <V> V fail(String message, Throwable cause) {
 		AssertionUtils.fail(message, cause);
+		return null; // appeasing the compiler: this line will never be executed.
 	}
 
 	/**
 	 * <em>Fails</em> a test with the given underlying {@code cause}.
 	 */
-	public static void fail(Throwable cause) {
+	public static <V> V fail(Throwable cause) {
 		AssertionUtils.fail(cause);
+		return null; // appeasing the compiler: this line will never be executed.
 	}
 
 	/**
 	 * <em>Fails</em> a test with the failure message retrieved from the
 	 * given {@code messageSupplier}.
 	 */
-	public static void fail(Supplier<String> messageSupplier) {
+	public static <V> V fail(Supplier<String> messageSupplier) {
 		AssertionUtils.fail(messageSupplier);
+		return null; // appeasing the compiler: this line will never be executed.
 	}
 
 	// --- assertTrue ----------------------------------------------------------
